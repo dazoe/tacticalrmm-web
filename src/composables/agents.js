@@ -28,10 +28,10 @@ export function useAgentDropdown() {
 }
 
 export function cmdPlaceholder(shell) {
-  if (shell === "cmd") return "rmdir /S /Q C:\\Windows\\System32";
+  if (shell === "cmd") return "ping /n 5 google.com";
   else if (shell === "powershell")
-    return "Remove-Item -Recurse -Force C:\\Windows\\System32";
-  else return "rm -rf --no-preserve-root /";
+    return "Test-Connection -ComputerName google.com -Count 5";
+  else return "ping -c 5 google.com";
 }
 
 export const agentPlatformOptions = [
